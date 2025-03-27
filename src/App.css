@@ -1,0 +1,361 @@
+.linear-year-grid {
+  display: grid;
+  grid-template-columns: auto repeat(12, 1fr);
+  gap: 4px;
+  align-items: start;
+  padding: 8px 0;
+}
+
+.month-headers {
+  display: contents;
+}
+
+.month-header {
+  text-align: center;
+  font-family: 'MedievalSharp', cursive;
+  color: #f0e6d2;
+  font-size: 0.85rem;
+  padding-bottom: 4px;
+}
+
+.days-rows {
+  display: contents;
+}
+
+.day-row {
+  display: contents;
+}
+
+.day-label {
+  grid-column: 1;
+  text-align: left;
+  font-family: 'MedievalSharp', cursive;
+  color: #f0e6d2;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  align-self: center;
+}
+
+.calendar-cell {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.calendar-cell.empty {
+  background: transparent;
+  border: none;
+}
+
+.calendar-cell.today {
+  border: 2px solid pink;
+  box-sizing: border-box;
+}
+.calendar-cell.future {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+
+.calendar-cell:hover {
+  outline: 2px solid #888;
+}
+
+.page-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #444;
+  color: white;
+  font-size: 1.5rem;
+  padding: 6px 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.page-toggle:hover {
+  background: #222;
+}
+
+.calendar-cell.today {
+  outline: 3px solid #333;
+}
+
+.calendar-cell.future {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.calendar-with-feedback {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.feedback-box {
+  min-width: 200px;
+  font-size: 0.95rem;
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.feedback-text {
+  margin: 0;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 0;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparent dark */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.fancy-tabs .tab {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.divider {
+  opacity: 0.6;
+}
+
+.top-nav button {
+  width: 80px;
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.top-nav button:hover {
+  background-color: #dcdcdc;
+}
+
+.top-nav button.active {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.arrow-nav {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.arrow {
+  background-color: rgba(180, 180, 180, 0.6); /* semi-transparent gray */
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(120, 120, 120, 0.8);
+  transform: scale(1.05);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url('/background_placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  font-family: 'MedievalSharp', cursive;
+  color: #f0e6d2; /* soft light golden */
+  font-weight: normal;
+  text-align: center;
+}
+
+.fantasy-text {
+  font-family: 'MedievalSharp', cursive;
+  color: #f0e6d2;
+}
+
+h1.fantasy-text {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+h2.fantasy-text {
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.month-header-placeholder {
+  grid-column: 1;
+}
+
+.container {
+  padding-top: 60px; /* adjust if needed based on your tab bar height */
+}
+
+.fancy-tabs .tab {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 12px;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.fancy-tabs .tab:hover {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.fancy-tabs .tab:active {
+  transform: scale(0.97);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.fancy-tabs .tab.active {
+  border-bottom: 2px solid #f0e6d2;
+}
+
+.page-title-bar {
+  position: fixed;
+  top: 44px; /* right below the tab switcher */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+  padding: 4px 0;
+  background: rgba(0, 0, 0, 0.2); /* soft overlay */
+}
+
+.page-title-bar h1 {
+  margin: 0;
+}
+.linear-month-grid {
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+}
+
+.days-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+  gap: 4px;
+  max-width: 100%;
+}
+
+.linear-month-grid .calendar-cell {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.8;
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.calendar-cell.today {
+  outline: 2px solid #fff;
+}
+
+.support-bot {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.bot-toggle {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  border: none;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.bot-window {
+  position: absolute;
+  left: 60px;
+  bottom: 0;
+  width: 300px;
+  max-height: 400px;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.bot-messages {
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.msg.user {
+  text-align: right;
+  color: #8de6dc;
+}
+.msg.assistant { text-align: left; color: #ffffff; }
+
+.bot-input {
+  display: flex;
+  gap: 4px;
+}
+
+.bot-input input {
+  flex: 1;
+  padding: 4px;
+  font-size: 0.85rem;
+}
+
+
+
+
