@@ -1,21 +1,15 @@
-MIT License
+Copyright (c) 2025 Ekaterina Ambartsumian
 
-Copyright (c) 2025 plovovo
+All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This source code is provided for reference and educational purposes only. The following conditions apply:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. No part of this codebase may be modified or republished outside of a pull request to the original repository at https://github.com/[YourUsername]/[RepoName].
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. Redistribution of this code, in original or modified form, on any platform including app stores, is strictly prohibited.
+
+3. Contributors submitting pull requests grant the repository owner, Ekaterina Ambartsumian, a perpetual, royalty-free, and irrevocable right to use, modify, distribute, and sublicense their submitted contributions.
+
+4. This code may not be used in any commercial product or service without explicit written permission from the repository owner.
+
+By accessing or submitting code to this repository, you agree to these terms.
