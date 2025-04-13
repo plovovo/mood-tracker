@@ -44,6 +44,52 @@ export default function MoodTracker() {
     });
   };
 
+  const renderMoviePage = () => (
+    <>
+      <div className="page-title-bar">
+        <h1 className="fantasy-text">Movies</h1>
+      </div>
+      <div className="movie-page">
+        <div className="movie-input">
+          <input
+            type="text"
+            value={newMovieTitle}
+            onChange={(e) => setNewMovieTitle(e.target.value)}
+            placeholder="Add a movie title..."
+          />
+          <button onClick={() => {
+            if (newMovieTitle.trim()) {
+              setMovies([...movies, { title: newMovieTitle.trim(), watched: false, rating: null }]);
+              setNewMovieTitle('');
+            }
+          }}>Add</button>
+        </div>
+        <div className="movie-grid">
+          {movies.map((movie, i) => (
+            <div key={i} className={`movie-box${movie.watched ? ' watched' : ''}`}>
+              <p className="movie-title">{movie.title}</p>
+              {movie.watched ? (
+                <p className="movie-rating">Rating: {movie.rating}/10</p>
+              ) : (
+                <div className="rate-movie">
+                  {[...Array(10)].map((_, r) => (
+                    <button key={r} onClick={() => {
+                      const updated = [...movies];
+                      updated[i].watched = true;
+                      updated[i].rating = r + 1;
+                      setMovies(updated);
+                    }}>{r + 1}</button>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+  
+
   const renderSleepPage = () => {
     const year = selectedDate.getFullYear();
     const month = selectedDate.getMonth();

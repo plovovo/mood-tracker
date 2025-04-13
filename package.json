@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "electron .",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "electron": "electron electron.cjs"
-
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -21,7 +21,7 @@
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
-    "electron": "^35.0.3",
+    "electron": "^35.1.2",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
@@ -29,5 +29,6 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.16",
     "vite": "^6.2.0"
-  }
+  },
+  "main": "main.js"
 }
